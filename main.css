@@ -1,0 +1,201 @@
+/*html5doctor.com Reset Stylesheet
+(Eric Meyer's Reset Reloaded + HTML5 baseline) v1.4 2009-07-27 | Authors: Eric Meyer & Richard Clark
+html5doctor.com/html-5-reset-stylesheet/ */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, figure, footer, header,&nbsp;hgroup, menu, nav, section, menu,
+time, mark, audio, video {
+margin:0;
+padding:0;
+border:0;
+outline:0;
+font-size:100%;
+vertical-align:baseline;
+background:transparent;
+
+}
+
+article, aside, figure, footer, header,
+hgroup, nav, section { display:block; }
+
+nav ul { list-style:none; }
+
+blockquote, q { quotes:none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after { content:''; content:none; }
+
+a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }
+
+ins { background-color:#ff9; color:#000; text-decoration:none; }
+
+mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
+
+del { text-decoration: line-through; }
+
+abbr[title], dfn[title] { border-bottom:1px dotted #000; cursor:help; }
+
+/* tables still need cellspacing="0" in the markup */
+table { border-collapse:collapse; border-spacing:0; }
+
+hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
+
+input, select { vertical-align:middle; }
+/* END RESET CSS */
+*{
+    box-sizing: border-box;
+}
+html{
+  background-color: #efeeea
+}
+html,body{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+body{
+  background:url(/img/bg.jpg) no-repeat 100% 100%;
+
+}
+.container{
+  padding: 4em;
+}
+.header img{
+  width: 100%;
+  height: auto
+}
+.hr_line{
+  border-top:2px solid #9c5d27;
+  width: 100%;
+  height: 2px;
+  display: block;
+  margin-top: 4em;
+  margin-bottom: 4em
+}
+
+
+.form-input[type=date], .form-input[type=datetime], .form-input[type=datetime-local], .form-input[type=email], .form-input[type=month], .form-input[type=password], .form-input[type=tel], .form-input[type=text], .form-input[type=time], .form-input[type=url], .form-input[type=week], .form-input[type=number], .form-input[type=search], .form-select, .form-textarea {
+    display: block;
+    width: 100%;
+    height: 44px;
+    height: 5.75rem;
+    padding: 8px;
+    padding: 1.5rem;
+    color: #222;
+    border: 1px solid #f19149;
+    border: .0625rem solid #f19149;
+    font-size: 2rem;
+    border-radius: 15px
+}
+.box{
+  background: none
+}
+.mb {
+    margin-bottom: 0!important;
+}
+.btn{
+  line-height: 2.5;
+  font-size: 2rem;
+  border-radius: 15px;
+  background-color: #f19149
+}
+select{
+    /*在选择框的最右侧中间显示小箭头图片*/
+    background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center transparent;
+}
+select,input[placeholder], [placeholder], *[placeholder]{
+  color: #d4a54e
+} 
+.btn-primary.is-active, .btn-primary:active {
+    background-color: #da7529;
+}
+.btn-primary:hover {
+    background-color: #da7529;
+}
+#container{
+  max-height: 60%;
+      max-width: 80%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+      background: #bd4141;
+      padding: 4em;
+      border-radius: 15px;
+      box-shadow: 0 0 38px rgba(0,0,0,0.5);
+
+}
+.container1{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  background-color: rgba(0,0,0,.5);
+
+}
+.table {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+}
+.table tfoot td, .table th {
+    color: #fff;
+    text-align: center;
+}
+#close {
+    position: absolute;
+    right: -30px;
+    top: -30px;
+    width: 60px;
+    height: 60px;
+    background: #ffffff;
+    /* box-shadow: inset 1px -1px 1px rgb(58, 0, 0); */
+    border: 2px solid #bd4141;
+    color: #bd4141;
+    text-align: center;
+    line-height: 2.2;
+    font-size: 1.5em;
+    border-radius: 100%;
+}
+#wrapper{
+  height: 100%;
+  overflow: auto;
+}
+.btn-round, input[type=button].btn-round, input[type=submit].btn-round {
+    border-radius: 15px;
+}
+.form-input[type=date], .form-input[type=datetime], .form-input[type=datetime-local], .form-input[type=email], .form-input[type=month], .form-input[type=password], .form-input[type=tel], .form-input[type=text], .form-input[type=time], .form-input[type=url], .form-input[type=week], .form-input[type=number], .form-input[type=search], .form-select, .form-textarea {  
+  appearance:none;  
+  -moz-appearance:none;  
+  -webkit-appearance:none;  
+  background: url("/img/arrow.gif") no-repeat scroll right center transparent;  
+  background-color: #fff;
+  padding-right: 14px;  
+}  
+#pop{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+}
+.span{
+  font-size: 36px;
+    font-weight: bold;
+    display: block;
+    background: #fff;
+    background: linear-gradient(to left,rgba(252,255,255,0.2),rgba(252,255,255,0.9),rgba(252,255,255,0.2));
+    padding: 14px;
+}

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="./src/css/frozen.css">
+<style type="text/css">
+  body{
+    background: -webkit-linear-gradient(to top,#4da5f1,#5857ae);
+    background: linear-gradient(to top,#4da5f1,#5857ae);
+  }
+  @font-face {font-family: 'webfont';
+    src: url('//at.alicdn.com/t/85jc3opfhazfflxr.eot'); /* IE9*/
+    src: url('//at.alicdn.com/t/85jc3opfhazfflxr.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('//at.alicdn.com/t/85jc3opfhazfflxr.woff') format('woff'), /* chrome、firefox */
+    url('//at.alicdn.com/t/85jc3opfhazfflxr.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('//at.alicdn.com/t/85jc3opfhazfflxr.svg#思源黑体-极细') format('svg'); /* iOS 4.1- */
+  }
+  .web-font{
+      font-family:"webfont" !important;
+      font-size:1.8rem;font-style:normal;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-stroke-width: 0.2px;
+      -moz-osx-font-smoothing: grayscale;
+  }
+  .ui-header-positive, .ui-footer-positive {
+      background-color: transparent;
+  }
+  .ui-header {
+      height: 100px;
+      line-height: 100px;
+  }
+  .ui-header~.ui-container {
+      border-top: 90px solid transparent;
+  }
+  .ui-form {
+      background-color: transparent;
+      width:100%;
+  }
+  .fix .ui-icon-close{
+    right: 0;
+  }
+  .ui-form-item-pure input, .ui-form-item-pure textarea {
+      padding-left: 0;
+      border-bottom: 1px solid #dff4fc;
+      padding: 10px 0;
+  }
+  .ui-form-item-pure>.ui-select {
+      margin-left:0
+  }
+  select{
+    color: #dff4fc
+  }
+  .ui-select:after{
+    color: #dff4fc;
+    right: 6px;
+  }
+  .ui-select{
+    border-bottom: 1px solid #dff4fc;
+    margin-right: 0;
+  }
+  .ui-form-item {
+      margin: 16px 10px;
+  }
+  #btn{
+    transition: all 1s;
+  }
+  #btn.active{
+    transform: translateY(-200px);
+    width: 200px;
+    height: 200px;
+    margin: 0px auto;
+    line-height: 200px;
+    border-radius: 200px;
+  }
+  .active:before {
+      content: '';
+      display: block;
+      width: 180px;
+      height: 90px;
+      border-radius: 360px 360px 0 0;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      border: 1px solid #dff4fc;
+      border-bottom-color: transparent;
+      opacity: 0.4;
+      transform-origin:50% 100%;
+      -webkit-transform-origin:50% 100%;
+      -webkit-animation:gogogo 2s infinite linear ;
+      animation:gogogo 2s infinite linear ;
+  }
+  .active:after {
+      content: '';
+      display: block;
+      width: 160px;
+      height: 80px;
+      border-radius: 320px 320px 0 0;
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      border: 1px solid #dff4fc;
+      border-bottom-color: transparent;
+      opacity: 0.4;
+      transform:rotate(90deg);
+      transform-origin:50% 100%;
+      -webkit-transform-origin:50% 100%;
+      -webkit-animation:gogo 1s infinite linear ;
+      animation:gogo 1s infinite linear ;
+  }
+  
+  input{
+    color: #dff4fc
+  }
+  .ui-btn, .ui-btn-lg, .ui-btn-s{
+    background: transparent;
+    color: #dff4fc;
+    border: 1px solid #dff4fc;
+    border-radius: 40px
+  }
+  .ui-btn:not(.disabled):not(:disabled):active, .ui-btn-lg:not(.disabled):not(:disabled):active, .ui-btn-s:not(.disabled):not(:disabled):active, .ui-btn.active, .active.ui-btn-lg, .active.ui-btn-s {
+      background: transparent;
+      color: #dff4fc;
+      
+  }
+  @-webkit-keyframes gogo {
+    0% {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+    50%{
+      -webkit-transform: rotate(270deg);
+      transform: rotate(270deg);
+    }
+    100% {
+      -webkit-transform: rotate(450deg);
+      transform: rotate(450deg);
+    }
+  }
+  @keyframes gogo {
+    0% {
+      -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+    50%{
+      -webkit-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      transform: rotate(270deg);
+    }
+    100% {
+      -webkit-transform: rotate(450deg);
+      -ms-transform: rotate(450deg);
+      transform: rotate(450deg);
+    }
+  }
+  @-webkit-keyframes gogogo {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    50%{
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes gogogo {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    50%{
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(180deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 50%, 0);
+      transform: translate3d(0, 50%, 0)
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none
+    }
+  }
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 50%, 0);
+      -ms-transform: translate3d(0, 50%, 0);
+      transform: translate3d(0, 50%, 0)
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none
+    }
+  }
+  @-webkit-keyframes fadeOutUp {
+    0% {
+      opacity: 1
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -50%, 0);
+      transform: translate3d(0, -50%, 0)
+    }
+  }
+  @keyframes fadeOutUp {
+    0% {
+      opacity: 1
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -50%, 0);
+      -ms-transform: translate3d(0, -50%, 0);
+      transform: translate3d(0, -50%, 0)
+    }
+  }
+  @-webkit-keyframes bounceOutUp {
+    20% {
+      -webkit-transform: translate3d(0, -10px, 0);
+      transform: translate3d(0, -10px, 0)
+    }
+/*     40%, 45% {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 20px, 0);
+  transform: translate3d(0, 20px, 0)
+} */
+    100% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -2000px, 0);
+      transform: translate3d(0, -2000px, 0)
+    }
+  }
+  @keyframes bounceOutUp {
+    20% {
+      -webkit-transform: translate3d(0, -10px, 0);
+      -ms-transform: translate3d(0, -10px, 0);
+      transform: translate3d(0, -10px, 0)
+    }
+/*     40%, 45% {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 20px, 0);
+  -ms-transform: translate3d(0, 20px, 0);
+  transform: translate3d(0, 20px, 0)
+} */
+    100% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -2000px, 0);
+      -ms-transform: translate3d(0, -2000px, 0);
+      transform: translate3d(0, -2000px, 0)
+    }
+  }
+  .bounceOutUp {
+    -webkit-animation-name: bounceOutUp;
+    animation-name: bounceOutUp
+  }
+  .fadeOutUp {
+    -webkit-animation-name: fadeOutUp;
+    animation-name: fadeOutUp
+  }
+  .fadeInUp {
+      -webkit-animation-name: fadeInUp;
+      animation-name: fadeInUp;
+  }
+  .animated {
+      -webkit-animation-duration: 0.5s;
+      animation-duration: 0.5s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+  }
+  .animatedMore {
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+  }
+
+  ::-webkit-input-placeholder { /* WebKit browsers */ 
+  color: #dff4fc; 
+  } 
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+  color: #dff4fc; 
+  } 
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+  color: #dff4fc; 
+  } 
+  :-ms-input-placeholder { /* Internet Explorer 10+ */ 
+  color: #dff4fc; 
+  } 
+</style>
+</head>
+<body ontouchstart="">
+<div style="background-image:url(./src/svg/1.svg);position:fixed;width:100%;height:100%;background-repeat: no-repeat;background-size: cover;">
+<header class="ui-header ui-header-positive">
+    <h1><i class="web-font">高考志愿预估</i></h1>
+</header>
+<section class="ui-container ui-center">
+    <div class="ui-form">
+        <form action="#">
+            <div class="ui-form-item ui-form-item-pure">
+                <div class="ui-select">
+                    <select>
+                        <option selected>文理分科</option>
+                        <option>文科</option>
+                        <option>理科</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="ui-form-item ui-form-item-pure">
+                <div class="ui-select">
+                    <select>
+                        <option selected>地区</option>
+                        <option>湖南</option>
+                        <option>广东</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="ui-form-item ui-form-item-pure">
+                <input type="text" placeholder="请输入你的成绩">
+            </div>
+            <div class="ui-form-item ui-form-item-pure" style="margin-top:30px">
+              <a class="ui-btn-lg" style="position:relative;" id="btn" onclick="start()">
+                  <span style="position:relative;display:block">开启预估</span>
+              </a>
+            </div>
+
+
+        </form>
+    </div>
+</section>
+
+</div>
+<script type="text/javascript" src="./src/js/lib/zeptojs/zepto.min.js"></script>
+<script type="text/javascript" src="./src/js/frozen.js"></script>
+<script type="text/javascript">
+  function getByClass (clsName,parent) {
+    var parent = document.getElementById(parent) || document;
+    var els = parent.getElementsByTagName('*');
+    var result = [];
+    for (var i = 0; i < els.length; i++) {
+      if (els[i].className.indexOf(clsName) >=0 ) {
+        result.push(els[i]);
+      };
+    };
+    return result;
+  }
+
+  function start () {
+    var btn = document.getElementById('btn');
+    var aSpan = btn.getElementsByTagName('span')[0];
+    var items = getByClass('ui-form-item');
+    aSpan.className = 'animated fadeOutUp';
+    items[0].className = items[0].className + ' animatedMore bounceOutUp';
+    items[2].className = items[2].className + ' animatedMore bounceOutUp';
+    items[1].className = items[1].className + ' animatedMore bounceOutUp';
+    btn.className = btn.className + ' active';
+    setTimeout(function(){
+      aSpan.innerHTML = '正在为您预估';
+      aSpan.className = 'animated fadeInUp';
+    }, 300);
+
+    btn.onclick = null;
+  }
+
+  var items = getByClass('ui-form-item');
+
+</script>
+</body>
+</html>
